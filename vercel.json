@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/style.css",
+      "destination": "/website/style.css"
+    },
+    {
+      "source": "/script.js",
+      "destination": "/website/script.js"
+    },
+    {
+      "source": "/assets/(.*)",
+      "destination": "/assets/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/website/index.html"
+    }
+  ]
+}
