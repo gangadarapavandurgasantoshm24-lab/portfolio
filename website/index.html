@@ -4,9 +4,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Santosh Maddukuri | Full Stack Developer & AI Enthusiast</title>
+  <title>Santosh Maddukuri | Software Development Engineer & Full Stack AI Developer</title>
   <meta name="description"
-    content="Portfolio of Maddukuri Gangadara Pavan Durga Santosh — Full Stack Developer, AI Enthusiast, and Machine Learning Research Student at IIIT Sri City." />
+    content="Portfolio of Maddukuri Gangadara Pavan Durga Santosh — Software Development Engineer, Full Stack Developer, and AI/ML & Computer Vision Researcher at IIIT Sri City." />
+  <meta name="author" content="Maddukuri Gangadara Pavan Durga Santosh" />
+  <meta name="theme-color" content="#050b18" />
+  <link rel="canonical" href="https://portfolio-nwkn.vercel.app/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/ball.png" />
+  <link rel="apple-touch-icon" href="../assets/ball.png" />
+
+  <!-- Open Graph / LinkedIn / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://portfolio-nwkn.vercel.app/" />
+  <meta property="og:title" content="Santosh Maddukuri | Software Development Engineer & Full Stack AI Developer" />
+  <meta property="og:description"
+    content="B.Tech CSE at IIIT Sri City · Full Stack Developer · AI/ML & Computer Vision Researcher. Winner of Utkrishta 2026 Hackathon." />
+  <meta property="og:image" content="../assets/santosh.jpg" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://portfolio-nwkn.vercel.app/" />
+  <meta name="twitter:title" content="Santosh Maddukuri | Software Development Engineer & Full Stack AI Developer" />
+  <meta name="twitter:description"
+    content="B.Tech CSE at IIIT Sri City · Full Stack Developer · AI/ML & Computer Vision Researcher. Winner of Utkrishta 2026 Hackathon." />
+  <meta name="twitter:image" content="../assets/santosh.jpg" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Maddukuri Gangadara Pavan Durga Santosh",
+    "alternateName": "Santosh Maddukuri",
+    "url": "https://portfolio-nwkn.vercel.app/",
+    "image": "https://portfolio-nwkn.vercel.app/assets/santosh.jpg",
+    "jobTitle": "Software Development Engineer",
+    "worksFor": {
+      "@type": "CollegeOrUniversity",
+      "name": "Indian Institute of Information Technology Sri City"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Indian Institute of Information Technology Sri City"
+    },
+    "sameAs": [
+      "https://github.com/gangadarapavandurgasantoshm24-lab",
+      "https://www.linkedin.com/in/santosh-maddukuri-991388373"
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -18,559 +67,802 @@
 <body>
 
   <!-- Particle Canvas -->
-  <canvas id="particle-canvas"></canvas>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
 
   <!-- Navigation -->
-  <nav id="navbar">
-    <div class="nav-container">
-      <div class="nav-logo">
-        <span class="logo-bracket">&lt;</span>Santosh<span class="logo-bracket">/&gt;</span>
+  <header>
+    <nav id="navbar" aria-label="Main Navigation">
+      <div class="nav-container">
+        <a href="#home" class="nav-logo" aria-label="Santosh Portfolio Home">
+          <span class="logo-bracket">&lt;</span>Santosh<span class="logo-bracket">/&gt;</span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="mailto:santhoshgangadhar416@gmail.com" class="nav-cta">Hire Me</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"
+          aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <a href="mailto:gangadarapavandurgasantosh@gmail.com" class="nav-cta">Hire Me</a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        Available for Opportunities
-      </div>
-      <h1 class="hero-title">
-        <span class="hero-greeting">Hi, I'm</span>
-        <span class="hero-name gradient-text">Santosh Maddukuri</span>
-      </h1>
-      <div class="hero-roles">
-        <span class="role-prefix">I build </span>
-        <span class="typed-text" id="typed-text"></span>
-        <span class="typed-cursor">|</span>
-      </div>
-      <p class="hero-desc">
-        B.Tech CS Student at IIIT Sri City · Full Stack Developer · AI &amp; ML Researcher
-        crafting intelligent applications that solve real-world problems.
-      </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn-primary">View My Work</a>
-        <a href="#contact" class="btn-secondary">Get In Touch</a>
-        <a href="../assets/Santosh_Resume.pdf" class="btn-resume" target="_blank" rel="noopener">Resume</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">8.4<span class="cyan">★</span></span>
-          <span class="stat-label">Current CGPA</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">4<span class="cyan">+</span></span>
-          <span class="stat-label">Projects Built</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">5<span class="cyan">+</span></span>
-          <span class="stat-label">GitHub Repos</span>
-        </div>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-photo-wrap">
-        <div class="hero-photo-ring"></div>
-        <img src="../assets/santosh.jpg" alt="Santosh Maddukuri" class="hero-photo" />
-        <div class="hero-photo-badge">Full Stack + AI</div>
-      </div>
-      <div class="floating-badges">
-        <div class="fb fb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-            alt="Python" /><span>Python</span></div>
-        <div class="fb fb-2"><img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-            alt="JS" /><span>JavaScript</span></div>
-        <div class="fb fb-3"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg"
-            alt="OpenCV" /><span>OpenCV</span></div>
-        <div class="fb fb-4"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-            alt="Node" /><span>Node.js</span></div>
-        <div class="fb fb-5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-            alt="Java" /><span>Java</span></div>
-        <div class="fb fb-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
-            alt="C" /><span>C</span></div>
-      </div>
-    </div>
-    <div class="scroll-indicator">
-      <span>Scroll Down</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
+  <main id="main-content">
 
-  <!-- About Section -->
-  <section id="about" class="section about-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">// about me</span>
-        <h2 class="section-title">Turning Ideas Into <span class="gradient-text">Intelligent Apps</span></h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-card glass-card">
-          <div class="about-icon-bar"></div>
-          <h3>Education</h3>
-          <p>B.Tech in Computer Science at <strong>IIIT Sri City</strong> (2024–2028). CGPA: <strong
-              class="cyan">8.4</strong> (Latest). Mandal 1st Rank in 10th. 98.8% in Intermediate.</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero" aria-label="Hero Introduction">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          Available for SDE &amp; AI Opportunities
         </div>
-        <div class="about-card glass-card">
-          <div class="about-icon-bar"></div>
-          <h3>Research</h3>
-          <p>Working on a <strong>Cricket Ball Tracking System</strong> under Dr. S. Manipriya at IIIT Sri City using
-            Computer Vision, OpenCV, and self-trained ML datasets.</p>
+        <h1 class="hero-title">
+          <span class="hero-greeting">Hi, I'm</span>
+          <span class="hero-name gradient-text">Santosh Maddukuri</span>
+        </h1>
+        <div class="hero-roles" aria-live="polite">
+          <span class="role-prefix">I am a </span>
+          <span class="typed-text" id="typed-text">Software Development Engineer</span>
+          <span class="typed-cursor" aria-hidden="true">|</span>
         </div>
-        <div class="about-card glass-card">
-          <div class="about-icon-bar"></div>
-          <h3>Vision</h3>
-          <p>Building the <strong>AI Decision Layer</strong> for online shopping. Developing an AI-powered commerce
-            intelligence platform that makes smarter purchasing decisions.</p>
+        <p class="hero-desc">
+          <strong>MADDUKURI GANGADARA PAVAN DURGA SANTOSH</strong> · B.Tech Computer Science and Engineering at
+          <strong>IIIT Sri City</strong>. Full Stack Developer and AI/ML &amp; Computer Vision Researcher crafting
+          scalable applications, intelligent 3D systems, and deep learning pipelines.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">View My Work</a>
+          <a href="#contact" class="btn-secondary">Get In Touch</a>
+          <a href="../assets/Santosh_Resume.pdf" class="btn-resume" target="_blank" rel="noopener noreferrer">Resume</a>
         </div>
-        <div class="about-card glass-card">
-          <div class="about-icon-bar"></div>
-          <h3>Achievements</h3>
-          <p>Solved <strong class="cyan">50+ DSA</strong> problems. Academic topper with consistent excellence from
-            school to university level.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="section skills-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">// tech stack</span>
-        <h2 class="section-title">Skills &amp; <span class="gradient-text">Technologies</span></h2>
-      </div>
-      <div class="skills-grid">
-
-        <div class="skill-category glass-card">
-          <div class="skill-cat-header">
-            <h3>Programming Languages</h3>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">8.15<span class="cyan">★</span></span>
+            <span class="stat-label">Current CGPA</span>
           </div>
-          <div class="skill-pills">
-            <span class="pill">Python</span>
-            <span class="pill">Java</span>
-            <span class="pill">JavaScript</span>
-            <span class="pill">C</span>
-            <span class="pill">SQL</span>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-num">5<span class="cyan">+</span></span>
+            <span class="stat-label">Featured Projects</span>
           </div>
-          <div class="skill-bars">
-            <div class="skill-bar-item"><span>Python</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:90%"></div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-num">150<span class="cyan">+</span></span>
+            <span class="stat-label">DSA Solved</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-ring" aria-hidden="true"></div>
+          <img src="../assets/santosh.jpg" alt="Maddukuri Gangadara Pavan Durga Santosh" class="hero-photo" />
+          <div class="hero-photo-badge">Full Stack + AI/ML</div>
+        </div>
+        <div class="floating-badges" aria-hidden="true">
+          <div class="fb fb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+              alt="Python" /><span>Python</span></div>
+          <div class="fb fb-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+              alt="React" /><span>React.js</span></div>
+          <div class="fb fb-3"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg"
+              alt="OpenCV" /><span>OpenCV</span></div>
+          <div class="fb fb-4"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+              alt="Node" /><span>Node.js</span></div>
+          <div class="fb fb-5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+              alt="Java" /><span>Java</span></div>
+          <div class="fb fb-6"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+              alt="PostgreSQL" /><span>PostgreSQL</span></div>
+        </div>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>Scroll Down</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section" aria-label="About Santosh">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// about me</span>
+          <h2 class="section-title">Turning Ideas Into <span class="gradient-text">Intelligent Applications</span></h2>
+          <p class="section-subtitle">
+            Computer Science undergraduate at IIIT Sri City driven by full-stack engineering, algorithmic problem
+            solving,
+            and machine learning research.
+          </p>
+        </div>
+        <div class="about-grid">
+          <div class="about-card glass-card">
+            <div class="about-icon-bar" aria-hidden="true"></div>
+            <h3>Education &amp; Academic Record</h3>
+            <p>
+              B.Tech in Computer Science and Engineering at <strong>IIIT Sri City</strong> (2024–2028) with a
+              <strong class="cyan">8.15 CGPA</strong>. Achieved <strong>98.8%</strong> in Intermediate at Tirumala
+              Junior
+              College and secured <strong>Mandal 1st Rank (96.17%)</strong> in 10th SSC examinations.
+            </p>
+          </div>
+          <div class="about-card glass-card">
+            <div class="about-icon-bar" aria-hidden="true"></div>
+            <h3>Full Stack Development</h3>
+            <p>
+              Experienced in designing robust frontend architectures with <strong>React.js</strong> and
+              <strong>React Three Fiber</strong>, connected to performant <strong>Node.js / Express</strong> backends,
+              RESTful APIs, Server-Sent Events (SSE), and relational databases like <strong>PostgreSQL</strong>.
+            </p>
+          </div>
+          <div class="about-card glass-card">
+            <div class="about-icon-bar" aria-hidden="true"></div>
+            <h3>AI/ML &amp; Computer Vision Research</h3>
+            <p>
+              Under Dr. S. Manipriya at IIIT Sri City, researching <strong>Cricket Ball Tracking &amp; Trajectory
+                Analysis</strong>
+              utilizing custom YOLO11, temporal tracking, and pose estimation. Built plant disease classification with
+              <strong>TensorFlow</strong>, MobileNetV2, EfficientNet, and Grad-CAM.
+            </p>
+          </div>
+          <div class="about-card glass-card">
+            <div class="about-icon-bar" aria-hidden="true"></div>
+            <h3>Algorithms &amp; Problem Solving</h3>
+            <p>
+              Solved <strong class="cyan">150+ DSA problems</strong> across LeetCode and GeeksforGeeks. Proficient in
+              graph
+              algorithms (Dijkstra, A*), optimization heuristics (Nearest Neighbor, 2-opt), ABC inventory analysis, and
+              scalable software design.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section" aria-label="Technical Skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// tech stack</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+          <p class="section-subtitle">
+            Core technologies, libraries, frameworks, and optimization algorithms applied across production platforms
+            and research projects.
+          </p>
+        </div>
+        <div class="skills-grid">
+
+          <!-- 1. Programming Languages -->
+          <div class="skill-category glass-card">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">💻</span>
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="pill pill-cyan">Java</span>
+              <span class="pill pill-cyan">Python</span>
+              <span class="pill pill-cyan">C</span>
+              <span class="pill pill-cyan">JavaScript</span>
+              <span class="pill pill-cyan">SQL</span>
+            </div>
+            <p class="skill-card-note">Core languages utilized for data structures, backend engineering, deep learning,
+              and CV pipelines.</p>
+          </div>
+
+          <!-- 2. Frontend Development -->
+          <div class="skill-category glass-card">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">🌐</span>
+              <h3>Frontend Development</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="pill">HTML</span>
+              <span class="pill">CSS</span>
+              <span class="pill pill-cyan">React.js</span>
+              <span class="pill pill-cyan">React Three Fiber</span>
+            </div>
+            <p class="skill-card-note">Responsive user interfaces, 3D interactive graphics, state synchronization, and
+              component modularity.</p>
+          </div>
+
+          <!-- 3. Backend Development -->
+          <div class="skill-category glass-card">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">⚙️</span>
+              <h3>Backend Development</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="pill pill-cyan">Node.js</span>
+              <span class="pill pill-cyan">Express.js</span>
+              <span class="pill">REST APIs</span>
+              <span class="pill pill-cyan">Server-Sent Events (SSE)</span>
+            </div>
+            <p class="skill-card-note">Microservices, real-time live streaming state updates, input validation, logging,
+              and error handling.</p>
+          </div>
+
+          <!-- 4. Databases -->
+          <div class="skill-category glass-card">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">🗄️</span>
+              <h3>Databases</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="pill pill-cyan">PostgreSQL</span>
+              <span class="pill">MySQL</span>
+            </div>
+            <p class="skill-card-note">Relational schema design, ACID transactions, data persistence, and query
+              optimization.</p>
+          </div>
+
+          <!-- 5. Machine Learning & Deep Learning -->
+          <div class="skill-category glass-card">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">🧠</span>
+              <h3>Machine Learning &amp; Deep Learning</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="pill">Machine Learning</span>
+              <span class="pill">Deep Learning</span>
+              <span class="pill pill-cyan">TensorFlow</span>
+              <span class="pill pill-cyan">Keras</span>
+              <span class="pill">CNN</span>
+              <span class="pill">MobileNetV2</span>
+              <span class="pill">EfficientNetB0</span>
+            </div>
+            <p class="skill-card-note">Transfer learning, fine-tuning, image augmentation, multi-class evaluation, and
+              precision metrics.</p>
+          </div>
+
+          <!-- 6. Computer Vision -->
+          <div class="skill-category glass-card">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">👁️</span>
+              <h3>Computer Vision</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="pill pill-cyan">OpenCV</span>
+              <span class="pill pill-cyan">YOLO11</span>
+              <span class="pill">Object Detection</span>
+              <span class="pill">Object Tracking</span>
+              <span class="pill">Trajectory Estimation</span>
+              <span class="pill">Pose Estimation</span>
+              <span class="pill">Grad-CAM</span>
+            </div>
+            <p class="skill-card-note">Frame-by-frame temporal tracking, outlier rejection, model explainability
+              heatmaps, and annotated video rendering.</p>
+          </div>
+
+          <!-- 7. Algorithms & Problem Solving -->
+          <div class="skill-category glass-card">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">📐</span>
+              <h3>Algorithms &amp; Problem Solving</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="pill pill-cyan">Data Structures &amp; Algorithms</span>
+              <span class="pill">Dijkstra</span>
+              <span class="pill">A*</span>
+              <span class="pill">Nearest Neighbor</span>
+              <span class="pill">2-opt</span>
+              <span class="pill">ABC Analysis</span>
+            </div>
+            <p class="skill-card-note">Shortest path optimization, TSP heuristic routing, demand-aware slotting, and
+              150+ DSA solved.</p>
+          </div>
+
+          <!-- 8. Developer Tools -->
+          <div class="skill-category glass-card">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">🛠️</span>
+              <h3>Developer Tools</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="pill">Git</span>
+              <span class="pill">Docker</span>
+              <span class="pill">Playwright</span>
+              <span class="pill">Vite</span>
+              <span class="pill">Streamlit</span>
+              <span class="pill">Vercel</span>
+              <span class="pill">NumPy</span>
+              <span class="pill">Pandas</span>
+            </div>
+            <p class="skill-card-note">Modern CI/CD, web scraping, scientific computing, UI prototyping, and
+              containerized deployment.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section" aria-label="Featured Projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// portfolio</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">
+            Real-world full-stack architectures, hackathon-winning 3D systems, deep learning models, and computer vision
+            research.
+          </p>
+        </div>
+        <div class="projects-grid">
+
+          <!-- Project 1: Click2Book -->
+          <article class="project-card glass-card" id="proj-click2book">
+            <div class="project-header">
+              <div class="project-icon-wrap">
+                <img src="../assets/bus.png" alt="Click2Book Icon" class="project-logo" />
+              </div>
+              <div class="project-meta">
+                <span class="project-role">Full Stack Developer</span>
+                <span class="project-status status-done">Production Ready</span>
               </div>
             </div>
-            <div class="skill-bar-item"><span>JavaScript</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:85%"></div>
-              </div>
+            <h3 class="project-title">Click2Book – Online Ticket Reservation System</h3>
+            <p class="project-desc">
+              Built a full-stack reservation application with trip search, interactive seat selection, booking
+              management,
+              cancellations, and customer support. Developed REST APIs and reusable React components with robust
+              logging,
+              error handling, security, input validation, and file uploads. Implemented PostgreSQL data persistence and
+              coordinated
+              frontend development, database integration, and end-to-end testing.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag cyan-tag">React.js</span>
+              <span class="tech-tag cyan-tag">JavaScript</span>
+              <span class="tech-tag cyan-tag">Node.js</span>
+              <span class="tech-tag cyan-tag">Express.js</span>
+              <span class="tech-tag cyan-tag">PostgreSQL</span>
+              <span class="tech-tag">REST APIs</span>
             </div>
-            <div class="skill-bar-item"><span>Java</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:70%"></div>
-              </div>
+            <div class="project-features">
+              <div class="feature-item"><span class="feat-dot" aria-hidden="true"></span>Trip Search &amp; Interactive
+                Seat Selection</div>
+              <div class="feature-item"><span class="feat-dot" aria-hidden="true"></span>Booking Lifecycle &amp;
+                Cancellation Management</div>
+              <div class="feature-item"><span class="feat-dot" aria-hidden="true"></span>Secure REST APIs with File
+                Upload &amp; Validation</div>
+              <div class="feature-item"><span class="feat-dot" aria-hidden="true"></span>PostgreSQL Relational Schema
+                &amp; Error Logging</div>
             </div>
-          </div>
-        </div>
-
-        <div class="skill-category glass-card">
-          <div class="skill-cat-header">
-            <h3>Web Development</h3>
-          </div>
-          <div class="skill-pills">
-            <span class="pill">HTML</span>
-            <span class="pill">CSS</span>
-            <span class="pill">JavaScript</span>
-            <span class="pill">Node.js</span>
-            <span class="pill">Full Stack</span>
-          </div>
-          <div class="skill-bars">
-            <div class="skill-bar-item"><span>HTML/CSS</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:88%"></div>
-              </div>
-            </div>
-            <div class="skill-bar-item"><span>Node.js</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:80%"></div>
-              </div>
-            </div>
-            <div class="skill-bar-item"><span>FastAPI</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:75%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-category glass-card">
-          <div class="skill-cat-header">
-            <h3>AI &amp; Machine Learning</h3>
-          </div>
-          <div class="skill-pills">
-            <span class="pill pill-cyan">OpenCV</span>
-            <span class="pill pill-cyan">ML</span>
-            <span class="pill pill-cyan">Computer Vision</span>
-            <span class="pill pill-cyan">AI</span>
-          </div>
-          <div class="skill-bars">
-            <div class="skill-bar-item"><span>OpenCV</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:82%"></div>
-              </div>
-            </div>
-            <div class="skill-bar-item"><span>Machine Learning</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:75%"></div>
-              </div>
-            </div>
-            <div class="skill-bar-item"><span>Computer Vision</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:78%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-category glass-card">
-          <div class="skill-cat-header">
-            <h3>Backend &amp; Infrastructure</h3>
-          </div>
-          <div class="skill-pills">
-            <span class="pill">To Learn: Docker</span>
-            <span class="pill">To Learn: AWS</span>
-            <span class="pill">To Learn: PostgreSQL</span>
-            <span class="pill">To Learn: Redis</span>
-            <span class="pill">To Learn: CI/CD</span>
-          </div>
-          <div class="skill-bars">
-            <div class="skill-bar-item"><span>Docker</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:35%"></div>
-              </div>
-            </div>
-            <div class="skill-bar-item"><span>AWS Basics</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:30%"></div>
-              </div>
-            </div>
-            <div class="skill-bar-item"><span>CI/CD</span>
-              <div class="bar">
-                <div class="bar-fill" style="--w:28%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section projects-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">// my work</span>
-        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
-      </div>
-      <div class="projects-grid">
-
-        <!-- Project 1 -->
-        <div class="project-card glass-card" id="proj-ticket">
-          <div class="project-header">
-            <div class="project-icon-wrap">
-              <img src="../assets/bus.png" alt="Ticket Booking" class="project-logo" />
-            </div>
-            <div class="project-meta">
-              <span class="project-role">Team Lead &amp; Full Stack Developer</span>
-              <span class="project-status status-done">Active</span>
-            </div>
-          </div>
-          <h3 class="project-title">Online Ticket Booking System</h3>
-          <p class="project-desc">A complete web platform for efficient ticket booking with user authentication, booking
-            management, and full backend integration. Led the development team end-to-end.</p>
-          <div class="project-tech">
-            <span class="tech-tag">HTML</span>
-            <span class="tech-tag">CSS</span>
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">SQL</span>
-          </div>
-          <div class="project-features">
-            <div class="feature-item"><span class="feat-dot"></span>User Authentication</div>
-            <div class="feature-item"><span class="feat-dot"></span>Ticket Booking Management</div>
-            <div class="feature-item"><span class="feat-dot"></span>Responsive UI</div>
-            <div class="feature-item"><span class="feat-dot"></span>Backend API Integration</div>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card glass-card featured" id="proj-cricket">
-          <div class="featured-label">Research</div>
-          <div class="project-header">
-            <div class="project-icon-wrap">
-              <img src="../assets/ball.png" alt="Cricket Ball Tracking" class="project-logo" />
-            </div>
-            <div class="project-meta">
-              <span class="project-role">Research Member</span>
-              <span class="project-status status-active">Active</span>
-            </div>
-          </div>
-          <h3 class="project-title">Cricket Ball Tracking System</h3>
-          <p class="project-desc">AI-powered research project under Dr. S. Manipriya at IIIT Sri City, using Computer
-            Vision and ML to track cricket ball movement frame-by-frame with self-trained datasets.</p>
-          <div class="project-tech">
-            <span class="tech-tag cyan-tag">Python</span>
-            <span class="tech-tag cyan-tag">OpenCV</span>
-            <span class="tech-tag cyan-tag">Machine Learning</span>
-            <span class="tech-tag cyan-tag">Computer Vision</span>
-          </div>
-          <div class="project-features">
-            <div class="feature-item"><span class="feat-dot"></span>Ball Movement Detection</div>
-            <div class="feature-item"><span class="feat-dot"></span>Frame-by-Frame Tracking</div>
-            <div class="feature-item"><span class="feat-dot"></span>Object Detection</div>
-            <div class="feature-item"><span class="feat-dot"></span>Self-Trained Dataset Processing</div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card glass-card upcoming" id="proj-ai-shop">
-          <div class="upcoming-glow"></div>
-          <div class="project-header">
-            <div class="project-icon-wrap">
-              <img src="../assets/trolley.png" alt="AI Shopping" class="project-logo" />
-            </div>
-            <div class="project-meta">
-              <span class="project-role">Founder &amp; Full Stack AI Developer</span>
-              <span class="project-status status-upcoming">Upcoming</span>
-            </div>
-          </div>
-          <h3 class="project-title">AI-Powered Shopping Comparison Platform</h3>
-          <p class="project-desc">An intelligent AI decision layer for online shopping — aggregates products from Amazon
-            &amp; Flipkart, compares prices, and uses GPT to recommend the best deals with AI-generated review
-            summaries.</p>
-          <div class="project-tech">
-            <span class="tech-tag">Flutter</span>
-            <span class="tech-tag">FastAPI</span>
-            <span class="tech-tag">OpenAI GPT</span>
-            <span class="tech-tag">Elasticsearch</span>
-            <span class="tech-tag">PostgreSQL</span>
-            <span class="tech-tag">Playwright</span>
-          </div>
-          <div class="ai-features-grid">
-            <div class="ai-feat"><span>AI Query Understanding</span></div>
-            <div class="ai-feat"><span>Product Aggregation</span></div>
-            <div class="ai-feat"><span>Price Comparison</span></div>
-            <div class="ai-feat"><span>Review Summarization</span></div>
-            <div class="ai-feat"><span>AI Recommendations</span></div>
-            <div class="ai-feat"><span>Product Matching</span></div>
-          </div>
-          <div class="mvp-strip">
-            <span class="mvp-label">MVP Focus</span>
-            <span>Electronics · Amazon + Flipkart · AI Search · Deal Comparison</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="section experience-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">// timeline</span>
-        <h2 class="section-title">Experience &amp; <span class="gradient-text">Achievements</span></h2>
-      </div>
-      <div class="timeline">
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card glass-card">
-            <div class="timeline-date">2026 – Present</div>
-            <h3 class="timeline-role">B.Tech Project Research Member</h3>
-            <div class="timeline-company">IIIT Sri City</div>
-            <ul class="timeline-points">
-              <li>Cricket Ball Tracking System under Dr. S. Manipriya</li>
-              <li>Exploring ML &amp; Computer Vision applications</li>
-              <li>Implementing OpenCV-based tracking techniques</li>
-              <li>Working with self-trained datasets</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card glass-card">
-            <div class="timeline-date">2026</div>
-            <h3 class="timeline-role">Team Lead – Online Ticket Booking System</h3>
-            <div class="timeline-company">Academic Full Stack Project</div>
-            <ul class="timeline-points">
-              <li>Led team in building a full stack ticket booking platform</li>
-              <li>Developed frontend with HTML, CSS, and JavaScript</li>
-              <li>Built backend functionalities using Node.js</li>
-              <li>Managed database integration and project workflow</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card glass-card">
-            <div class="timeline-date">2024 – Present</div>
-            <h3 class="timeline-role">B.Tech CSE Student</h3>
-            <div class="timeline-company">IIIT Sri City</div>
-            <ul class="timeline-points">
-              <li>CGPA (2-1 Semester): <strong class="cyan">8.4</strong></li>
-              <li>Overall CGPA: 7.8</li>
-              <li>Solved 50+ DSA Problems</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Achievements -->
-      <div class="achievements-row">
-        <div class="achievement-card glass-card">
-          <div class="ach-num">1st</div>
-          <div>
-            <h4>10th Grade</h4>
-            <p class="achievement-school">Sri Ravindra Bharathi School, Tallapudi Mandal</p>
-            <p>Mandal 1st Rank with excellent academic performance.</p>
-          </div>
-        </div>
-        <div class="achievement-card glass-card">
-          <div class="ach-num">98.8</div>
-          <div>
-            <h4>12th Grade (Intermediate)</h4>
-            <p class="achievement-school">Tirumala Junior College</p>
-            <p>Graduated 2024 · Percentage: 98.8%</p>
-            <p>Completed higher secondary education with a stellar academic record, building a strong foundation in Mathematics, Physics, and Chemistry.</p>
-          </div>
-        </div>
-        <div class="achievement-card glass-card">
-          <div class="ach-num">50+</div>
-          <div>
-            <h4>50+ DSA</h4>
-            <p>Problems Solved</p>
-            <p>Recently started practicing Data Structures and Algorithms, building consistency through problem-solving and coding fundamentals.</p>
-          </div>
-        </div>
-        <div class="achievement-card glass-card">
-          <div class="ach-num">8.4</div>
-          <div>
-            <h4>CGPA 8.4</h4>
-            <p>Latest Semester</p>
-            <p>Shows strong academic excellence in B.Tech CSE with steady performance and disciplined learning across core subjects.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">// get in touch</span>
-        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
-        <p class="section-subtitle">Open for internships, collaborations, and AI project opportunities.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-left">
-          <div class="contact-info-card glass-card">
-            <h3>Contact Information</h3>
-            <div class="contact-items">
-              <a href="mailto:gangadarapavandurgasantosh@gmail.com" class="contact-item" id="contact-email">
-                <div class="contact-item-icon"><img src="../assets/gmail.png" alt="Email" /></div>
-                <div>
-                  <span class="contact-item-label">Email</span>
-                  <span class="contact-item-value">gangadarapavandurgasantosh@gmail.com</span>
-                </div>
-              </a>
-              <a href="tel:7995823055" class="contact-item" id="contact-phone">
-                <div class="contact-item-icon"><img src="../assets/phone.png" alt="Phone" /></div>
-                <div>
-                  <span class="contact-item-label">Phone</span>
-                  <span class="contact-item-value">7995823055</span>
-                </div>
-              </a>
-              <div class="contact-item" id="contact-location">
-                <div class="contact-item-icon"><img src="../assets/location.png" alt="Location" /></div>
-                <div>
-                  <span class="contact-item-label">Location</span>
-                  <span class="contact-item-value">Kothapeta, East Godavari, Andhra Pradesh</span>
-                </div>
-              </div>
-              <a href="https://www.linkedin.com/in/santosh-maddukuri-991388373" target="_blank" rel="noopener"
-                class="contact-item" id="contact-linkedin">
-                <div class="contact-item-icon"><img src="../assets/ln.png" alt="LinkedIn" /></div>
-                <div>
-                  <span class="contact-item-label">LinkedIn</span>
-                  <span class="contact-item-value">santosh-maddukuri</span>
-                </div>
-              </a>
-              <a href="https://github.com/dashboard" target="_blank" rel="noopener" class="contact-item"
-                id="contact-github">
-                <div class="contact-item-icon"><img src="../assets/git.png" alt="GitHub" /></div>
-                <div>
-                  <span class="contact-item-label">GitHub</span>
-                  <span class="contact-item-value">github.com/Santosh</span>
-                </div>
+            <div class="project-actions">
+              <a href="https://github.com/gangadarapavandurgasantoshm24-lab" target="_blank" rel="noopener noreferrer"
+                class="project-link-btn" aria-label="View Click2Book code on GitHub">
+                <span>View on GitHub</span>
+                <span class="btn-arrow" aria-hidden="true">→</span>
               </a>
             </div>
+          </article>
+
+          <!-- Project 2: SmartSlot AI -->
+          <article class="project-card glass-card featured" id="proj-smartslot">
+            <div class="featured-label">🏆 1st Prize · Utkrishta 2026</div>
+            <div class="project-header">
+              <div class="project-icon-wrap">
+                <img src="../assets/trolley.png" alt="SmartSlot AI Icon" class="project-logo" />
+              </div>
+              <div class="project-meta">
+                <span class="project-role">Team Lead &amp; Full Stack Developer</span>
+                <span class="project-status status-active">Award Winning</span>
+              </div>
+            </div>
+            <h3 class="project-title">SmartSlot AI – Intelligent Multi-Warehouse Management &amp; Optimization</h3>
+            <p class="project-desc">
+              Developed a 3D multi-warehouse management platform featuring inventory tracking, demand forecasting, and
+              intelligent storage allocation. Implemented inventory CRUD, inter-warehouse transfers, ABC analysis, and
+              demand-aware slotting. Integrated Dijkstra and A* pathfinding with Nearest Neighbor and 2-opt algorithms
+              to optimize
+              multi-stop picking routes. Built Manager, Picker, Supplier, and Analyst portals with real-time state
+              synchronization via SSE.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag cyan-tag">React</span>
+              <span class="tech-tag cyan-tag">React Three Fiber</span>
+              <span class="tech-tag cyan-tag">Node.js</span>
+              <span class="tech-tag cyan-tag">Vite</span>
+              <span class="tech-tag">Dijkstra &amp; A*</span>
+              <span class="tech-tag">Nearest Neighbor &amp; 2-opt</span>
+              <span class="tech-tag cyan-tag">Server-Sent Events (SSE)</span>
+            </div>
+            <div class="project-features">
+              <div class="feature-item"><span class="feat-dot" aria-hidden="true"></span>3D Warehouse Visualization in
+                React Three Fiber</div>
+              <div class="feature-item"><span class="feat-dot" aria-hidden="true"></span>Dijkstra &amp; A* Picking Route
+                Pathfinding</div>
+              <div class="feature-item"><span class="feat-dot" aria-hidden="true"></span>Nearest Neighbor &amp; 2-opt
+                Multi-Stop Optimization</div>
+              <div class="feature-item"><span class="feat-dot" aria-hidden="true"></span>Role-Based Portals with
+                Real-Time SSE Sync</div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/gangadarapavandurgasantoshm24-lab" target="_blank" rel="noopener noreferrer"
+                class="project-link-btn" aria-label="View SmartSlot AI code on GitHub">
+                <span>View on GitHub</span>
+                <span class="btn-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 3: PricePilot -->
+          <article class="project-card glass-card" id="proj-pricepilot">
+            <div class="project-header">
+              <div class="project-icon-wrap">
+                <img src="../assets/trolley.png" alt="PricePilot Icon" class="project-logo" />
+              </div>
+              <div class="project-meta">
+                <span class="project-role">Full Stack Developer</span>
+                <span class="project-status status-active">Active</span>
+              </div>
+            </div>
+            <h3 class="project-title">PricePilot – Intelligent Multi-Store Price Comparison Platform</h3>
+            <p class="project-desc">
+              Built a unified search platform to collect and compare product listings across e-commerce retailers.
+              Implemented
+              variant-aware product matching and final payable price calculations including platform fees and instant
+              discounts.
+              Developed cashback and EMI separation, intelligent offer ranking, direct retailer links, and automated
+              regression tests.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag cyan-tag">JavaScript</span>
+              <span class="tech-tag cyan-tag">Node.js</span>
+              <span class="tech-tag cyan-tag">Express.js</span>
+              <span class="tech-tag cyan-tag">Playwright</span>
+              <span class="tech-tag">REST APIs</span>
+              <span class="tech-tag">HTML &amp; CSS</span>
+            </div>
+            <div class="project-features">
+              <div class="feature-item"><span class="feat-dot" aria-hidden="true"></span>Multi-Store Listing Aggregation
+                via Playwright</div>
+              <div class="feature-item"><span class="feat-dot" aria-hidden="true"></span>Variant-Aware Matching &amp;
+                Fee-Inclusive Price Math</div>
+              <div class="feature-item"><span class="feat-dot" aria-hidden="true"></span>Cashback, EMI Breakdown &amp;
+                Offer Ranking</div>
+              <div class="feature-item"><span class="feat-dot" aria-hidden="true"></span>Automated Scraping Verification
+                &amp; Regression Tests</div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/gangadarapavandurgasantoshm24-lab" target="_blank" rel="noopener noreferrer"
+                class="project-link-btn" aria-label="View PricePilot code on GitHub">
+                <span>View on GitHub</span>
+                <span class="btn-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 4: SmartAgriculture -->
+          <article class="project-card glass-card" id="proj-smartagri">
+            <div class="project-header">
+              <div class="project-icon-wrap">
+                <img src="../assets/ball.png" alt="SmartAgriculture Icon" class="project-logo" />
+              </div>
+              <div class="project-meta">
+                <span class="project-role">AI/ML Developer</span>
+                <span class="project-status status-done">Completed</span>
+              </div>
+            </div>
+            <h3 class="project-title">SmartAgriculture – AI-Based Plant Disease Detection System</h3>
+            <p class="project-desc">
+              Developed an AI-powered plant disease detection system using deep learning to classify healthy and
+              diseased leaves
+              across 66 classes and 20 crop types. Implemented and compared CNN, MobileNetV2, and EfficientNetB0
+              architectures using
+              transfer learning and fine-tuning. Performed image preprocessing, data augmentation, class balancing, and
+              model evaluation.
+              Integrated Grad-CAM for visual explainability and built a Streamlit application with prevention measures
+              and pesticide advice.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag cyan-tag">Python</span>
+              <span class="tech-tag cyan-tag">TensorFlow &amp; Keras</span>
+              <span class="tech-tag cyan-tag">CNN</span>
+              <span class="tech-tag">MobileNetV2</span>
+              <span class="tech-tag">EfficientNetB0</span>
+              <span class="tech-tag cyan-tag">OpenCV &amp; Grad-CAM</span>
+              <span class="tech-tag">Streamlit</span>
+            </div>
+            <div class="project-features">
+              <div class="feature-item"><span class="feat-dot" aria-hidden="true"></span>66 Disease Classes Across 20
+                Crop Varieties</div>
+              <div class="feature-item"><span class="feat-dot" aria-hidden="true"></span>Comparative Evaluation (CNN vs
+                MobileNet vs EfficientNet)</div>
+              <div class="feature-item"><span class="feat-dot" aria-hidden="true"></span>Grad-CAM Visual Heatmaps for
+                Explainable AI</div>
+              <div class="feature-item"><span class="feat-dot" aria-hidden="true"></span>Interactive Streamlit
+                Diagnostic Dashboard</div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/gangadarapavandurgasantoshm24-lab" target="_blank" rel="noopener noreferrer"
+                class="project-link-btn" aria-label="View SmartAgriculture code on GitHub">
+                <span>View on GitHub</span>
+                <span class="btn-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 5: Cricket Ball Tracking -->
+          <article class="project-card glass-card featured" id="proj-cricket">
+            <div class="featured-label">🔬 Research Project</div>
+            <div class="project-header">
+              <div class="project-icon-wrap">
+                <img src="../assets/ball.png" alt="Cricket Ball Tracking Icon" class="project-logo" />
+              </div>
+              <div class="project-meta">
+                <span class="project-role">Research Member (Dr. S. Manipriya)</span>
+                <span class="project-status status-active">Research</span>
+              </div>
+            </div>
+            <h3 class="project-title">Cricket Ball Tracking and Trajectory Analysis</h3>
+            <p class="project-desc">
+              Developed custom-trained YOLO11n ball detection with temporal tracking, trajectory estimation, outlier
+              rejection,
+              direction consistency, and short-gap prediction under Dr. S. Manipriya at IIIT Sri City. Integrated ball
+              tracking with
+              bat/person detection and pose estimation, producing annotated videos and structured CSV outputs. Evaluated
+              16 external
+              red-, white-, and pink-ball videos (3,411 frames): 10/11 visible bat-contact events within ±1 frame and
+              11/11 within ±5 frames.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag cyan-tag">Python</span>
+              <span class="tech-tag cyan-tag">OpenCV</span>
+              <span class="tech-tag cyan-tag">YOLO11</span>
+              <span class="tech-tag">Pose Estimation</span>
+              <span class="tech-tag">Trajectory Estimation</span>
+              <span class="tech-tag">NumPy &amp; Pandas</span>
+            </div>
+            <div class="project-features">
+              <div class="feature-item"><span class="feat-dot" aria-hidden="true"></span>YOLO11n Ball Detection with
+                Temporal Tracking</div>
+              <div class="feature-item"><span class="feat-dot" aria-hidden="true"></span>Outlier Rejection &amp;
+                Direction Consistency Filters</div>
+              <div class="feature-item"><span class="feat-dot" aria-hidden="true"></span>Bat-Contact Accuracy: 10/11
+                Events within ±1 Frame</div>
+              <div class="feature-item"><span class="feat-dot" aria-hidden="true"></span>Annotated High-Speed Video
+                Rendering &amp; CSV Exports</div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/gangadarapavandurgasantoshm24-lab" target="_blank" rel="noopener noreferrer"
+                class="project-link-btn" aria-label="View Cricket Tracking code on GitHub">
+                <span>View on GitHub</span>
+                <span class="btn-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section" aria-label="Experience and Timeline">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// timeline</span>
+          <h2 class="section-title">Experience &amp; <span class="gradient-text">Milestones</span></h2>
+          <p class="section-subtitle">Academic research, project leadership, and continuous software development
+            milestones.</p>
+        </div>
+        <div class="timeline">
+
+          <!-- Experience 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-date">2026 – Present</div>
+              <h3 class="timeline-role">B.Tech Project Research Member</h3>
+              <div class="timeline-company">Indian Institute of Information Technology Sri City (Under Dr. S. Manipriya)
+              </div>
+              <ul class="timeline-points">
+                <li>Computer vision research involving cricket ball detection, temporal tracking, trajectory estimation,
+                  and pose estimation.</li>
+                <li>Utilizing Python, OpenCV, custom-trained YOLO11 models, and mathematical filtering algorithms.</li>
+                <li>Conducted rigorous frame-by-frame validation across 16 match broadcast videos (3,411 frames)
+                  spanning red, white, and pink balls.</li>
+                <li>Achieved high-precision bat-contact event localization: 10/11 visible events within ±1 frame.</li>
+              </ul>
+            </div>
           </div>
+
+          <!-- Experience 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-date">2026</div>
+              <h3 class="timeline-role">Hackathon Winner &amp; Team Lead – SmartSlot AI</h3>
+              <div class="timeline-company">Utkrishta 2026 Hackathon · Team Unbreakable Loop</div>
+              <ul class="timeline-points">
+                <li>Secured 1st Prize in Neural Forget Track 2 for architecting an intelligent 3D multi-warehouse
+                  management system.</li>
+                <li>Engineered 3D warehouse floorplans using React Three Fiber and integrated real-time state sync via
+                  Server-Sent Events.</li>
+                <li>Implemented Dijkstra and A* pathfinding paired with Nearest Neighbor and 2-opt heuristics for
+                  multi-stop picking optimization.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-date">2025 – 2026</div>
+              <h3 class="timeline-role">Full Stack Developer – Click2Book System</h3>
+              <div class="timeline-company">Academic Software Engineering Project</div>
+              <ul class="timeline-points">
+                <li>Architected full-stack ticket reservation workflows with interactive seat selection and cancellation
+                  rules.</li>
+                <li>Constructed modular React.js user interfaces connected to an Express.js / Node.js backend.</li>
+                <li>Designed normalized PostgreSQL schemas with input validation, transactional integrity, and logging.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience 4 -->
+          <div class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-date">2024 – Present</div>
+              <h3 class="timeline-role">B.Tech Computer Science and Engineering</h3>
+              <div class="timeline-company">Indian Institute of Information Technology Sri City</div>
+              <ul class="timeline-points">
+                <li>Current Cumulative Grade Point Average (CGPA): <strong class="cyan">8.15 / 10</strong>.</li>
+                <li>Solved 150+ DSA problems across LeetCode and GeeksforGeeks with emphasis on graphs, dynamic
+                  programming, and trees.</li>
+                <li>Active contributor to campus technical workshops and collaborative development projects.</li>
+              </ul>
+            </div>
+          </div>
+
         </div>
 
-        <div class="contact-right">
-          <form class="contact-form glass-card" id="contact-form">
-            <h3>Send a Message</h3>
-            <div class="form-row">
+        <!-- Achievements -->
+        <div class="achievements-row">
+          <div class="achievement-card glass-card">
+            <div class="ach-num">1st</div>
+            <div>
+              <h4>Utkrishta 2026 Hackathon</h4>
+              <p class="achievement-school">Team Unbreakable Loop · 1st Prize</p>
+              <p>Won 1st Prize for SmartSlot AI in the Neural Forget Track 2, developing a 3D intelligent warehouse
+                optimization system.</p>
+            </div>
+          </div>
+          <div class="achievement-card glass-card">
+            <div class="ach-num">1st</div>
+            <div>
+              <h4>10th SSC Examinations</h4>
+              <p class="achievement-school">Sri Ravindra Bharathi School · 96.17%</p>
+              <p>Secured Mandal 1st Rank with outstanding academic performance across all subjects.</p>
+            </div>
+          </div>
+          <div class="achievement-card glass-card">
+            <div class="ach-num">98.8</div>
+            <div>
+              <h4>Intermediate (12th Grade)</h4>
+              <p class="achievement-school">Tirumala Junior College · 98.8%</p>
+              <p>Completed higher secondary education with top honors, building a strong foundation in Mathematics,
+                Physics, and Chemistry.</p>
+            </div>
+          </div>
+          <div class="achievement-card glass-card">
+            <div class="ach-num">150+</div>
+            <div>
+              <h4>DSA Problems Solved</h4>
+              <p class="achievement-school">LeetCode &amp; GeeksforGeeks</p>
+              <p>Solved 150+ coding problems sharpening data structures, graph pathfinding, optimization heuristics, and
+                algorithmic efficiency.</p>
+            </div>
+          </div>
+          <div class="achievement-card glass-card">
+            <div class="ach-num">8.15</div>
+            <div>
+              <h4>B.Tech CSE at IIIT Sri City</h4>
+              <p class="achievement-school">CGPA: 8.15</p>
+              <p>Consistent academic excellence in core computer science subjects, systems engineering, and machine
+                learning research.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section" aria-label="Contact Information">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// get in touch</span>
+          <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+          <p class="section-subtitle">Open for Software Development Engineer (SDE) roles, AI/ML internships, and
+            collaborative projects.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-left">
+            <div class="contact-info-card glass-card">
+              <h3>Contact Information</h3>
+              <div class="contact-items">
+                <a href="mailto:santhoshgangadhar416@gmail.com" class="contact-item" id="contact-email">
+                  <div class="contact-item-icon"><img src="../assets/gmail.png" alt="Email Icon" /></div>
+                  <div>
+                    <span class="contact-item-label">Email</span>
+                    <span class="contact-item-value">santhoshgangadhar416@gmail.com</span>
+                  </div>
+                </a>
+                <a href="tel:+917995823055" class="contact-item" id="contact-phone">
+                  <div class="contact-item-icon"><img src="../assets/phone.png" alt="Phone Icon" /></div>
+                  <div>
+                    <span class="contact-item-label">Phone</span>
+                    <span class="contact-item-value">+91 7995823055</span>
+                  </div>
+                </a>
+                <div class="contact-item" id="contact-location">
+                  <div class="contact-item-icon"><img src="../assets/location.png" alt="Location Icon" /></div>
+                  <div>
+                    <span class="contact-item-label">Location</span>
+                    <span class="contact-item-value">Kothapeta, East Godavari, Andhra Pradesh, India</span>
+                  </div>
+                </div>
+                <a href="https://www.linkedin.com/in/santosh-maddukuri-991388373" target="_blank"
+                  rel="noopener noreferrer" class="contact-item" id="contact-linkedin">
+                  <div class="contact-item-icon"><img src="../assets/ln.png" alt="LinkedIn Icon" /></div>
+                  <div>
+                    <span class="contact-item-label">LinkedIn</span>
+                    <span class="contact-item-value">linkedin.com/in/santosh-maddukuri</span>
+                  </div>
+                </a>
+                <a href="https://github.com/gangadarapavandurgasantoshm24-lab" target="_blank" rel="noopener noreferrer"
+                  class="contact-item" id="contact-github">
+                  <div class="contact-item-icon"><img src="../assets/git.png" alt="GitHub Icon" /></div>
+                  <div>
+                    <span class="contact-item-label">GitHub</span>
+                    <span class="contact-item-value">github.com/gangadarapavandurgasantoshm24-lab</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-right">
+            <form class="contact-form glass-card" id="contact-form" novalidate>
+              <h3>Send a Message</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="f-name">Your Name</label>
+                  <input type="text" id="f-name" name="name" placeholder="John Doe" required autocomplete="name" />
+                </div>
+                <div class="form-group">
+                  <label for="f-email">Your Email</label>
+                  <input type="email" id="f-email" name="email" placeholder="john@example.com" required
+                    autocomplete="email" />
+                </div>
+              </div>
               <div class="form-group">
-                <label for="f-name">Your Name</label>
-                <input type="text" id="f-name" name="name" placeholder="John Doe" required />
+                <label for="f-subject">Subject</label>
+                <input type="text" id="f-subject" name="subject" placeholder="SDE Opportunity / Collaboration / Project"
+                  required />
               </div>
               <div class="form-group">
-                <label for="f-email">Your Email</label>
-                <input type="email" id="f-email" name="email" placeholder="john@example.com" required />
+                <label for="f-message">Message</label>
+                <textarea id="f-message" name="message" rows="5"
+                  placeholder="Tell me about your opportunity or project..." required></textarea>
               </div>
-            </div>
-            <div class="form-group">
-              <label for="f-subject">Subject</label>
-              <input type="text" id="f-subject" name="subject" placeholder="Internship / Collaboration / Project" />
-            </div>
-            <div class="form-group">
-              <label for="f-message">Message</label>
-              <textarea id="f-message" name="message" rows="5" placeholder="Tell me about the opportunity..."
-                required></textarea>
-            </div>
-            <button type="submit" class="btn-primary btn-full" id="send-message-btn">
-              <span>Send Message</span>
-              <span class="btn-icon">→</span>
-            </button>
-            <div class="form-success" id="form-success">
-              ✅ Message sent! (Demo — configure backend to enable actual sending)
-            </div>
-          </form>
+              <button type="submit" class="btn-primary btn-full" id="send-message-btn">
+                <span>Send Message</span>
+                <span class="btn-icon" aria-hidden="true">→</span>
+              </button>
+              <div class="form-status" id="form-status" aria-live="polite"></div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
@@ -578,15 +870,17 @@
       <div class="footer-logo">
         <span class="logo-bracket">&lt;</span>Santosh<span class="logo-bracket">/&gt;</span>
       </div>
-      <p class="footer-tagline">Building the AI Decision Layer for Online Shopping</p>
+      <p class="footer-tagline">Software Development Engineer · Full Stack &amp; Computer Vision Researcher</p>
       <div class="footer-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </div>
-      <p class="footer-copy">© 2025 Maddukuri Gangadara Pavan Durga Santosh </p>
+      <p class="footer-copy">© <span id="current-year">2026</span> MADDUKURI GANGADARA PAVAN DURGA SANTOSH. All rights
+        reserved.</p>
     </div>
   </footer>
 
